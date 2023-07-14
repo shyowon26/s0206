@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<title>404 Error</title>
+<!-- <link rel="stylesheet" type="text/css" href="https://www.dddproject.com/html/css/common.css?1657893895" media="all"> -->
+<style>
+/* Reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
+body,h1,h2,h3,h4,input,button,textarea,pre,a,select{font-family: 'Noto Sans KR', sans-serif; font-size:15px;color:#000}
+body{text-align:left; word-break:break-word;}
+img,fieldset,iframe{border:0 none}
+li{list-style:none}
+input,select,button{vertical-align:middle}
+img{vertical-align:top; max-width:100%;}
+i,em,address{font-style:normal}
+label,button{cursor:pointer}
+a{color:#000;text-decoration:none}
+a:hover{}
+hr{display:none}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0}
+caption{font-size:0; line-height:0; height:0}
+
+
+.errorWrap {width: 100%; height: 100vh; background:url('/html/images/error/bg.jpg') center no-repeat; background-size:cover; display:flex; justify-content:center; align-items:center;}
+.errorWrap .in {width:430px; text-align: center; margin-bottom:50px;}
+.errorWrap .in .tit {margin-bottom:55px;}
+.errorWrap .in .tit01 {font-size:30px;line-height:30px; color:#000000; font-weight:500; margin-bottom:25px;}
+.errorWrap .in .tit02 {font-size:18px;line-height:25px; color:#888888; font-weight:300; margin-bottom:70px;}
+.errorWrap .in .link-container a {display: block; height:85px; line-height:85px; background:#222222;  text-align: center; }
+.errorWrap .in .link-container a span {font-size:20px; line-height:20px; color:#fff; font-weight:500; padding-left:33px;  background:url('/html/images/error/ico.png') left center no-repeat; background-size:19px auto;}
+.errorWrap .logo{position: fixed; left:0;  bottom:50px; text-align: center; width:100%;} 
+.errorWrap .logo img {width:185px;}
+
+@media all and (max-width:1240px){
+	.errorWrap .in {width: 100%; padding:0 50px; margin-bottom:70px;}
+	.errorWrap .in .tit {margin-bottom:30px;}
+	.errorWrap .in .tit img {width:190px;}
+	.errorWrap .in .tit01 {font-size:18px;line-height:18px; color:#000000; font-weight:500; margin-bottom:15px;}
+	.errorWrap .in .tit02 {font-size:12px;line-height:20px; color:#888888; font-weight:300; margin-bottom:40px;}
+	.errorWrap .in .link-container a {display: block; height:45px; line-height:45px; background:#222222;  text-align: center; }
+	.errorWrap .in .link-container a span {font-size:13px; line-height:13px; color:#fff; font-weight:500; padding-left:25px;  background:url('/html/images/error/ico.png') left center no-repeat; background-size:15px auto;}
+	.errorWrap .logo{position: fixed; left:0;  bottom:30px; text-align: center; width:100%;} 
+	.errorWrap .logo img {width:130px;}
+}
+</style>
+</head>
+
+<body translate="no" >
+
+	<div class="errorWrap">
+		<div class="in">
+			<div class="tit"><img src="/html/images/error/tit404.png" alt="404"></div>
+			<div class="tit01">찾을 수 없는 페이지입니다.</div>
+			<div class="tit02">사라진 페이지 또는<br />잘못된 경로로 접속한 페이지입니다.</div>
+			<div class="link-container">
+			  <a href="https://dddproject.com" class="more-link"><span>다디단프로젝트 메인 바로가기</span></a>
+			</div>
+		</div>
+		<div class="logo">
+			<img src="/html/images/error/logo.png" alt="DADIDAN">
+		</div>
+	</div>
+</body>
+</html>
+ 
