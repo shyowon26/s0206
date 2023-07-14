@@ -1,0 +1,489 @@
+@charset "utf-8";
+/* @font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 100; src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format("woff2"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format("woff"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format("opentype"); }
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 300; src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype"); }
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format("woff2"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format("woff"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format("opentype"); }
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 500; src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype"); }
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 700; src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype"); }
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 900; src: url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format("woff2"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format("woff"), url(https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format("opentype"); } */
+
+.rbWrap {
+    font-family: 'Noto Sans KR' !important;
+}
+
+.btnRb {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    width: 250px;
+    height: 190px;
+    background: url('../images/rb/rbBg.jpg') no-repeat;
+    background-size: cover;
+}
+
+.btnRb .count {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 55px;
+    height: 27px;
+    line-height: 27px;
+    font-weight: 300;
+    text-align: center;
+    background: #f1f1f1;
+    letter-spacing: 2px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 14px;
+    color: #aaaaaa;
+    font-weight: 300;
+}
+
+.btnRb .swiper-container {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btnRb .tit {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.btnRb .tit span {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+    padding-top: 35px;
+    font-size: 25px;
+    height: 100px;
+    line-height: 33px;
+    color: #444444;
+    font-weight: 500;
+    background: url('../images/rb/rbIcon.png') center top no-repeat;
+    background-size: 33px auto;
+}
+
+.btnRb .navThumb span {
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    width: 11px;
+    height: 20px;
+    text-indent: -999em;
+    z-index: 50;
+    outline: none;
+    cursor: pointer;
+}
+
+.btnRb .navThumb span.swiper-button-disabled {
+    display: none;
+}
+
+.btnRb .navThumb .rbThumbPrev {
+    left: 20px;
+    background: url('../images/rb/rbArrow1.png') center top no-repeat;
+    background-size: 10px auto;
+    ;
+}
+
+.btnRb .navThumb .rbThumbNext {
+    right: 20px;
+    background: url('../images/rb/rbArrow2.png') center top no-repeat;
+    background-size: 10px auto;
+    ;
+}
+
+body.rbActive .rbPop {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99999;
+}
+
+.rbPop {
+    word-break: keep-all;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/rb/rbBg.jpg') no-repeat;
+    background-size: cover;
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s all;
+}
+
+.rbPop .in {
+    height: 600px;
+    width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -300px 0 0 -300px;
+}
+
+.rbPop .mCustom {
+    position: relative;
+    height: 450px;
+    padding: 0 10px;
+}
+
+/* .rbPop .mCSB_container {top:0 !important} */
+
+.rbPop .mCSB_scrollTools {
+    opacity: 1 !important
+}
+
+.rbPop .mCSB_scrollTools * {
+    opacity: 1 !important
+}
+
+.rbPop .mCSB_scrollTools .mCSB_draggerContainer {
+    background: #f0f0f0;
+    width: 8px !important;
+    border-radius: 10px;
+    opacity: 1 !important
+}
+
+.rbPop .mCSB_scrollTools .mCSB_dragger {
+    background: #aeaeae;
+    border-radius: 10px;
+    border: none;
+    opacity: 1 !important
+}
+
+.rbPop .mCSB_scrollTools .mCSB_dragger_bar {
+    background: #aeaeae !important;
+    border: none;
+}
+
+.rbPop .close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    text-indent: -999em;
+    width: 20px;
+    height: 20px;
+    background: url('../images/rb/rbClose.png') center top no-repeat;
+    background-size: 20px auto;
+    ;
+}
+
+.rbPop .rbTitle {
+    font-size: 26px;
+    color: #444444;
+    font-weight: 500;
+    padding-bottom: 55px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: url('../images/rb/rbLine.png') center bottom no-repeat;
+}
+
+.rbPop .infoRb {
+    font-size: 24px;
+    padding-top: 20px;
+    line-height: 38px;
+    color: #444444;
+    font-weight: 300;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.rbPop .infoRb .title {
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.rbPop .infoRb .title:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -3px;
+    ;
+    height: 1px;
+    width: 6px;
+    background: #444444;
+}
+
+.rbPop .rbNav span {
+    text-indent: -999em;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 40px;
+    margin-top: -14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.rbPop .rbNav span.rbPrev {
+    left: -220px;
+    background: url('../images/rb/rbArrow1.png') center no-repeat;
+    background-size: 10px auto;
+    ;
+}
+
+.rbPop .rbNav span.rbNext {
+    right: -220px;
+    background: url('../images/rb/rbArrow2.png') center no-repeat;
+    background-size: 10px auto;
+    ;
+}
+
+.rbPop .rbNav span.swiper-button-disabled {
+    opacity: 0
+}
+
+.rbWrap.arrowNone .rbNav {
+    display: none;
+}
+
+.rbWrap.arrowNone .rbNav {
+    display: none !important
+}
+
+.rbWrap.arrowNone .btnRb .navThumb {
+    display: none !important
+}
+
+body.rbActive {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+@media all and (max-width: 1024px) {
+    .btnRb {
+        width: 100%;
+        height: 50px;
+        padding: 0 70px;
+    }
+    .btnRb .swiper-container {
+        width: 100%;
+    }
+    .btnRb .swiper-container .swiper-slide {}
+    .btnRb .count {
+        position: absolute;
+        right: auto;
+        left: 0;
+        top: 15px;
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 11px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .btnRb .tit {
+        padding: 0 0 0 0;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+    .btnRb .tit span {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: calc(100vw - 142px);
+        padding: 0;
+        height: 50px;
+        line-height: 50px;
+        font-size: 15px;
+        color: #444444;
+        font-weight: 500;
+        padding-left: 22px;
+        background: url('../images/rb/rbIcon.png') left center no-repeat;
+        background-size: 18px auto;
+    }
+    .btnRb .tit:after {
+        display: none;
+    }
+    .btnRb .tit:before {
+        display: none;
+    }
+    body.rbActive .btnRb .tit:before {
+        content: '';
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -10px;
+        width: 20px;
+        height: 20px;
+        background: url('../images/rb/rbClose.png') center no-repeat;
+        background-size: 15px auto;
+        ;
+    }
+    .btnRb .mobOpen {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 0px;
+        width: 50px;
+        height: 50px;
+        background: url('../images/rb/rbArrowTop.png') center no-repeat;
+        background-size: 15px auto;
+        ;
+        z-index: 30;
+        display: none;
+    }
+    .btnRb .navThumb span {
+        width: 40px;
+        height: 50px;
+        top: 0;
+        margin-top: 0;
+    }
+    .btnRb .navThumb .rbThumbPrev {
+        left: 35px;
+        background: url('../images/rb/rbArrow1_m.png') center center no-repeat;
+        background-size: 8px auto;
+        ;
+    }
+    .btnRb .navThumb .rbThumbNext {
+        right: 0;
+        background: url('../images/rb/rbArrow2_m.png') center center no-repeat;
+        background-size: 8px auto;
+        ;
+    }
+    .rbPop {
+        height: 100%;
+    }
+    .rbPop .in {
+        height: auto;
+        width: 100%;
+        padding: 30px 15px 0 15px;
+        margin: 0 auto;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0 0 0 0;
+    }
+    .rbPop .mCustom {
+        position: relative;
+        height: calc(100vh - 160px);
+        padding: 0;
+        overflow-y: scroll !important
+    }
+    /* .mCustomScrollBox {overflow-y:scroll !important } */
+    .rbPop .mCSB_scrollTools {
+        opacity: 1 !important
+    }
+    .rbPop .mCSB_scrollTools * {
+        opacity: 1 !important
+    }
+    .rbPop .mCSB_scrollTools .mCSB_draggerContainer {
+        background: #f0f0f0;
+        width: 4px !important;
+        border-radius: 10px;
+        opacity: 1 !important
+    }
+    .rbPop .mCSB_scrollTools .mCSB_dragger {
+        background: #aeaeae;
+        border-radius: 15px;
+        border: none;
+        opacity: 1 !important
+    }
+    .rbPop .mCSB_scrollTools .mCSB_dragger_bar {
+        background: #aeaeae !important;
+        border: none;
+    }
+    .rbPop .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+        text-indent: -999em;
+        width: 20px;
+        height: 20px;
+        background: url('../images/rb/rbClose.png') center top no-repeat;
+        background-size: 15px auto;
+        ;
+        z-index: 50;
+    }
+    .rbPop .rbTitle {
+        position: relative;
+        font-size: 18px;
+        min-height: 72px;
+        font-weight: 500;
+        padding: 25px 30px 25px 30px;
+        margin-bottom: 15px;
+        text-align: center;
+        background: url('../images/rb/rbLine.png') center bottom no-repeat;
+    }
+    .rbPop .rbTitle span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .rbPop .infoRb {
+        font-size: 15px;
+        padding-top: 10px;
+        line-height: 28px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .rbPop .infoRb .title {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
+    .rbPop .infoRb .title:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-left: -3px;
+        ;
+        height: 1px;
+        width: 6px;
+        background: #444444;
+    }
+    .rbPop .rbNav span {
+        text-indent: -999em;
+        position: absolute;
+        top: 47px;
+        width: 20px;
+        height: 40px;
+        margin-top: 0;
+        outline: none;
+        cursor: pointer;
+        z-index: 20;
+    }
+    .rbPop .rbNav span.rbPrev {
+        left: 15px;
+        background: url('../images/rb/rbArrow1_m.png') center no-repeat;
+        background-size: 8px auto;
+        ;
+    }
+    .rbPop .rbNav span.rbNext {
+        right: 15px;
+        background: url('../images/rb/rbArrow2_m.png') center no-repeat;
+        background-size: 8px auto;
+        ;
+    }
+    .rbPop .rbNav span.swiper-button-disabled {
+        opacity: .3
+    }
+    body.banner {
+        padding-bottom: 50px;
+    }
+    body.banner .quickWrap {
+        bottom: 50px;
+    }
+}

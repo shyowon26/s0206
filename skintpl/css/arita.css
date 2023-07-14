@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'AritaBuri';
+    font-style: normal;
+    font-weight: 100;
+    src: local('※'), url('./fonts/AritaBuriL.woff2') format('woff2'), url('./fonts/AritaBuriL.woff') format('woff'), url('./fonts/AritaBuriL.ttf') format('truetype'), url('./fonts/AritaBuriL.otf') format('opentype'), url('./fonts/AritaBuriL.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'AritaBuri';
+    font-style: normal;
+    font-weight: 400;
+    src: local('※'), url('./fonts/AritaBuriM.woff2') format('woff2'), url('./fonts/AritaBuriM.woff') format('woff'), url('./fonts/AritaBuriM.ttf') format('truetype'), url('./fonts/AritaBuriM.otf') format('opentype'), url('./fonts/AritaBuriM.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'AritaBuri';
+    font-style: normal;
+    font-weight: 700;
+    src: local('※'), url('./fonts/AritaBuriSB.woff2') format('woff2'), url('./fonts/AritaBuriSB.woff') format('woff'), url('./fonts/AritaBuriSB.ttf') format('truetype'), url('./fonts/AritaBuriSB.otf') format('opentype'), url('./fonts/AritaBuriSB.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'AritaBuri';
+    font-style: normal;
+    font-weight: 900;
+    src: local('※'), url('./fonts/AritaBuriB.woff2') format('woff2'), url('./fonts/AritaBuriB.woff') format('woff'), url('./fonts/AritaBuriB.ttf') format('truetype'), url('./fonts/AritaBuriB.otf') format('opentype'), url('./fonts/AritaBuriB.eot') format('embedded-opentype');
+}
