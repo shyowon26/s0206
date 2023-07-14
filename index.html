@@ -794,16 +794,7 @@
                                 </form>
                             </div>
                             <!-- //inputWrap -->
-                            <!-- partyCheck -->
-                            <div class="partyCheck">
-                                <div class="btn">
-                                    <a href="javascript:;" onclick="hideBtn('.complete');">버튼을 눌러 참석여부를 전달해주세요!</a>
-                                </div>
-                                <div class="thxBox" style="display:none">
-                                    감사합니다. 정상 전달되었습니다.
-                                </div>
-                            </div>
-                            <!-- //partyCheck -->
+                            
                         </div>
                         <!-- //comWrap -->
                     </div>
@@ -1144,10 +1135,10 @@
     <div class="popImg">
         <div class="in">
             <div class="imageContainer">
-                <img src="openImg('https://wedding.dddproject.com/data/file/order_form/2113089417_ZyIRAgQ7_ed824741c6c3c243e82c2d506a4fa617a94aceb2.jpeg');" class="zoomImg">
+                <img src="openImg('./photo/ogg_photo.jpg');" class="zoomImg">
             </div>
         </div>
-        <a href="openImg('https://wedding.dddproject.com/data/file/order_form/2113089417_ZyIRAgQ7_ed824741c6c3c243e82c2d506a4fa617a94aceb2.jpeg');" class="btnDownload" download><button>다운로드</button></a>
+        <a href="openImg('./photo/ogg_photo.jpg');" class="btnDownload" download><button>다운로드</button></a>
         <button type="button" class="btnClose" onclick="imgPopClose();">닫기</button>
     </div>
     <!-- //popImg -->
@@ -1171,172 +1162,16 @@
             <div class="btn"><button type="button" id="btnGuestBookSubmit">전송</button></div>
         </div>
     </div>
-    <script src="https://wedding.dddproject.com/skin/tpl/wedding03-new/js/hammer.zoom.js"></script>
-    <div class="btnNav" style="display:none;">
-        <a href="https://map.kakao.com/link/map/서울 신라호텔,37.5575055053737,127.007952910656" target="_blank">네비게이션 바로보기</a>
-    </div>
-    <input type="hidden" id="ca_name" value="청첩장">
-    <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            addScript('head', '//t1.kakaocdn.net/kakao_js_sdk/v1/kakao.min.js', () => {
-                window.kakaoShareLoaded = true;
-                Kakao.init('85aa736a23e5afb096ad81554ff8f00d');
-            })
-        });
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YZYG5PKYY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        gtag("config", "G-0YZYG5PKYY");
-    </script>
-
-    <style>
-        // For IOS
-        body {
-            -webkit-touch-callout: none;
-        }
-    </style>
-    <script>
-        $(function() {
-            /*$("img").each( function(){
-                $(this).attr({"oncontextmenu":"return false"});
-            });*/
-            // For Android
-            $(document).bind("contextmenu", function(e) {
-                return false;
-            });
-
-            /*$("img").on("touchstart",function(e){
-                let eventStop = true;
-                if( $(this).closest(".swiper-button-next").length || $(this).hasClass("zoomImg") ) {
-                    console.log("aa");
-                    eventStop = false;
-                }
-                
-                
-                eventStop ? e.preventDefault() : ""
-            }).on("touchend",function(e){
-                let eventStop = true;
-                if( $(this).closest(".swiper-button-next").length || $(this).hasClass("zoomImg") ) {
-                    console.log("bb");
-                    eventStop = false;
-                }
-                
-                eventStop ? e.preventDefault() : ""
-            }).on("touchmove",function(e){
-                //e.preventDefault(); 
-            });*/
-
-            /*$("a").on("click", function(e) {
-                if( !this.attr("href").indexOf("tel") )
-                    e.preventDefault();
-            })*/
-
-            $("a").on("contextmenu", (e) => {
-                e.preventDefault();
-                return false;
-            })
-
-            //$("img").attr("oncontextmenu","return false").attr("style","-webkit-touch-callout:none");
-
-            setTimeout(function() {
-                try {
-                    var map_level = map.getLevel();
-                    map.setLevel(map_level + 1);
-                    map.setLevel(map_level);
-                } catch (e) {}
-            }, 1000);
-        });
-    </script>
+    <script src="./skintpl/js/hammer.zoom.js"></script>
 
 
-    <div class="rbWrap">
-        <div class="btnRb">
-            <span class="count"><em class="chNum">1</em>/<em class="numTotal">1</em></span>
-            <div class="thumbTbSlide">
-                <div class="swiper-container">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <div class="tit"><span>모바일청첩장 저작권 및 무단도용 안내</span></div>
-                        </li>
 
-                        <li class="swiper-slide">
-                            <div class="tit"><span>[공지] 웰컴드링크 & 포토부스 안내</span></div>
-                        </li>
 
-                        <li class="swiper-slide">
-                            <div class="tit"><span>[공지] 전세버스 이용 안내</span></div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navThumb">
-                    <span class="rbThumbNext">다음</span>
-                    <span class="rbThumbPrev">이전</span>
-                </div>
-            </div>
-        </div>
-        <div class="mobOpen"></div>
-        <div class="rbPop">
-            <div class="in">
-                <div class="cont">
-                    <div class="rbSlide">
-                        <div class="swiper-container">
-                            <ul class="swiper-wrapper">
 
-                                <li class="swiper-slide">
-                                    <div class="rbTitle">모바일청첩장 저작권 및 무단도용 안내</div>
-                                    <div class="content mCustom">
-                                        <div class="infoRb">
-                                            <p class="text">모바일청첩장 및 다디단프로젝트의<br /> 모든 웹 페이지의 디자인을 포함한 사진, 이미지, 문구 등<br /> 모든 콘텐츠의 저작권은 다디단프로젝트에 있습니다.<br />
-                                                <br /> 무단으로 복제 · 도용하여 상업 및 영리 목적으로<br /> 이용하는 행위, 흡사한 디자인 및 기능의 구성으로<br /> 2차 생산 · 활용하는 행위 모두 별도의 경고 없이<br /> 민 · 형사상의 법적 조치를 통해 강경히 대응할 것입니다.</p>
-                                        </div>
-                                    </div>
-                                </li>
+  
+  
 
-                                <li class="swiper-slide">
-                                    <div class="rbTitle">[공지] 웰컴드링크 & 포토부스 안내</div>
-                                    <div class="content mCustom">
-                                        <div class="infoRb">
-                                            <p class="text">오전 10시부터 예식장 로비에는<br /> 웰컴드링크와 핑거푸드가 준비될 예정입니다.<br />
-                                                <br /> 예식 전 먼저 도착하신 분들은 로비에서<br /> 준비된 웰컴드링크와 핑거푸드를 자유로이 이용하시며<br /> 예식 전 편안히 시간 보내시기를 바랍니다.<br />
-                                                <br /> 또한 웰컴드링크 옆 설치된 포토부스도<br /> 자유롭게 이용하시며 신랑 & 신부에게 더욱<br /> 기억에 남을 포토 방명록도 남겨주세요!♥</p>
-                                        </div>
-                                    </div>
-                                </li>
 
-                                <li class="swiper-slide">
-                                    <div class="rbTitle">[공지] 전세버스 이용 안내</div>
-                                    <div class="content mCustom">
-                                        <div class="infoRb">
-                                            <p class="text">멀리서 찾아와주시는 하객 분들을 위해<br /> 예식장까지 모시는 전세버스를 준비했습니다.<br />
-                                                <br /> 버스 탑승을 원하시는 분들은<br /> 아래 인솔자에게 사전 연락 부탁드리며,<br /> 오시는 길 편히 이용해 주시기를 바랍니다.<br />
-                                                <br /> 【 출발장소 】<br /> ○○○ 종합 터미널 앞<br />
-                                                <br /> 【 출발시간 】<br /> 예식 당일 오전 11시 정각<br />
-                                                <br /> 【 인솔자 】<br /> 홍길동 010-0000-0000</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                        <div class="rbNav">
-                            <span class="rbNext">다음</span>
-                            <span class="rbPrev">이전</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="close">닫기</div>
-
-        </div>
-    </div>
 
 
     <script>
@@ -1459,6 +1294,10 @@
     </script>
 
 
+
+
+
+  
     <script>
         var ck_name = "wedding03-new";
         var visitCookie = "";
@@ -1487,238 +1326,127 @@
         });
     </script>
 
-    <div class="visitPop" style="z-index:998;">
-        <div class="bg"></div>
-        <div class="in">
-            <div class="titVisit">프리미엄 RSVP (참석여부) 전달하기</div>
-
-            <form name="form_rsvp" id="form_rsvp" method="post" autocomplete="off">
-                <div class="left">
-                    <div class="title">참석 여부를 선택해 주세요.(필수)<span class="vReq"></span></div>
-                    <div class="radio">
-                        <div>
-                            <input type="radio" name="rv_visit" id="visit01" value="0">
-                            <label class="color01" for="visit01">참석 불가</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="rv_visit" id="visit02" value="1" checked="checked">
-                            <label class="color02" for="visit02">참석 가능</label>
-                        </div>
-                    </div>
-                    <div class="title" style="margin-top:30px;">참석 정보를 입력해 주세요.</div>
-                    <div class="radio">
-                        <div>
-                            <input type="radio" name="rv_gubun" id="couple01" value="groom">
-                            <label class="color03" for="couple01">신랑측</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="rv_gubun" id="couple02" value="bride" checked='checked'>
-                            <label class="color04" for="couple02">신부측</label>
-                        </div>
-                    </div>
-                    <table class="visitTb">
-                        <colgroup>
-                            <col style="width:120px" />
-                            <col />
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>성함<span class="vReq"></span></th>
-                                <td><input type="text" name="rv_name" id="rv_name" placeholder="(필수)대표자 한 분의 성함을 입력해 주세요."></td>
-                            </tr>
-
-                            <tr>
-                                <th>연락처</th>
-                                <td><input type="tel" name="rv_hp" id="rv_hp" placeholder="참석자 대표 연락처를 입력해주세요."></td>
-                            </tr>
-
-                            <tr class="rv_person_tr">
-                                <th>참석인원<span class="vReq"></span></th>
-                                <td><input type="tel" name="rv_person" id="rv_person" placeholder="(필수)본인 포함 참석 인원을 입력해 주세요."></td>
-                            </tr>
-                            <tr class="rv_person_together_tr">
-                                <th>동행인 성함</th>
-                                <td><input type="text" name="rv_person_together" id="rv_person_together" placeholder="참석인원 성함을 쉼표(,)로 구분하여 입력해 주세요."></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="btnNext">
-                        <a href="javascript:;" class="btn01" onclick="visitNext()">다음</a>
-                    </div>
-                </div>
-
-                <div class="right">
 
 
-                    <div class="addRsvpList">
-                        <input type="hidden" name="po_id[0]" value="363">
-                        <input type="hidden" name="po_cnt[0]" value="0">
-                        <input type="hidden" name="require_type" value="visitor" />
-                        <div class="title">식사 여부를 알려주세요.(필수)<span class='vReq'></span></div>
-                        <ul>
-                            <li>
-                                <input type="radio" name="gb_poll[0]" value="1" id="gb_poll[0]1">
-                                <label for="gb_poll[0]1">
-    								<em>식사 가능</em>
-    								<span>예식 당일 식사가 가능합니다.</span>
-    							</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="gb_poll[0]" value="2" id="gb_poll[0]2">
-                                <label for="gb_poll[0]2">
-    								<em>식사 불가 · 답례품 수령</em>
-    								<span>식시가 불가하여 답례품만 수령합니다.</span>
-    							</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="addRsvpList">
-                        <input type="hidden" name="po_id[1]" value="364">
-                        <input type="hidden" name="po_cnt[1]" value="1">
-                        <input type="hidden" name="require_type" value="visitor" />
-                        <div class="title">전세버스 이용 여부를 알려주세요.(필수)<span class='vReq'></span></div>
-                        <ul>
-                            <li>
-                                <input type="radio" name="gb_poll[1]" value="1" id="gb_poll[1]1">
-                                <label for="gb_poll[1]1">
-    								<em>전세버스 이용 안 함</em>
-    								<span></span>
-    							</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="gb_poll[1]" value="2" id="gb_poll[1]2">
-                                <label for="gb_poll[1]2">
-    								<em>신랑측 전세버스 이용</em>
-    								<span>○○○ 종합 터미널 ↔ 서울 신라호텔</span>
-    							</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="gb_poll[1]" value="3" id="gb_poll[1]3">
-                                <label for="gb_poll[1]3">
-    								<em>신부측 전세버스 이용</em>
-    								<span>○○ 체육관 앞 ↔ 서울 신라호텔</span>
-    							</label>
-                            </li>
-                        </ul>
-                    </div>
+   function kakaoShare() {
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '🤵🏽원제 👰🏻효지, 결혼합니다!',
+          description: '소중한 자리에 소중한 분들을 모십니다.',
+          imageUrl: 'https://shyowon26.github.io/assets/dist/image/photo/bg_08.jpg',
+          link: {
+            mobileWebUrl: 'https://shyowon26.github.io',
+            webUrl: 'https://shyowon26.github.io',
+          },
+        },
+        buttons: [
+          {
+            title: '청첩장 보기',
+            link: {
+              mobileWebUrl: 'https://shyowon26.github.io',
+              webUrl: 'https://shyowon26.github.io',
+            },
+          }
+        ],
+      });
+    }
 
-                    <div class="title">전달사항이 있으시다면 입력해 주세요.</div>
-                    <table class="visitTb">
-                        <colgroup>
-                            <col style="width:120px" />
-                            <col />
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>전달사항</th>
-                                <td><input type="text" name="rv_memo" id="rv_memo" maxlength="25" placeholder="전달하실 내용을 입력해 주세요. (최대 25자)"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    $(document).ready(function () {
+      $('.lazy').lazy();
 
-                    <div class="agreeVisit">
-                        <div class="tit01">개인정보 수집 및 이용 동의(필수)<span class="vReq"></span></div>
-                        <div class="tit02">참석여부 전달을 위한 개인정보 수집 및 이용에 동의해주세요.<br />작성하신 개인정보는 신랑 & 신부 측에서만 확인 가능합니다.<br/>항목 : 성함, 연락처, 동행인 성함 · 보유기간 : 청첩장 이용 종료 시 까지</div>
-                        <div class="ck">
-                            <input type="checkbox" id="agreeVisit">
-                            <label for="agreeVisit">동의합니다.</label>
-                        </div>
-                    </div>
-
-
-
-                    <div class="btn">
-                        <a href="#;" class="btn03" onclick="visitPrev()">이전</a>
-                        <a href="#;" id="rsvpSubmitBtn" class="btn02" style="cursor:pointer;" onclick="doRsvpSubmitBtn();"><span>참석여부 전달하기</span></a>
-                    </div>
-
-                </div>
-
-            </form>
-
-            <a href="javascript:;" class="close" onclick="visitClose()">닫기</span></a>
-
-            <script>
-                //$("#rsvpSubmitBtn").on("click",function(e){ e.preventDefault(); document.querySelector('#btnSubmitRsvp').click();})
-            </script>
-
-        </div>
-    </div>
-    <script>
-        let checkedId = [];
-        $(".addRsvpList input:radio").on('click', function() {
-            const index = $(".addRsvpList").index($(this).closest(".addRsvpList"));
-            const checked = checkedId[index] == $(this).attr("id") ? false : true;
-            $(this).prop("checked", checked);
-            checkedId[index] = checked ? $(this).attr("id") : "";
+      setTimeout( ()=> {
+        $('.popslide img.lazy').each( function() {
+            $(this).attr('src', $(this).data('src'));
+            $(this).removeAttr('data-src');
+            $(this).removeClass('lazy');
         });
-    </script>
+      },5000);
+
+     
+
+      Kakao.init('328b20e51cc288ef1d95bb9a213d1fa9');
+
+      $(".marqWrap").liMarquee({
+        removeContentFadeDuration: 0,
+        scrollAmount: 6,
+        circular: true,
+        startShow: true,
+      });
+
+      $("a").on("contextmenu", (e) => {
+        e.preventDefault();
+        return false;
+      });
+
+      var LatLng = { lat: '36.620527', lng: '127.467258' };
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = {
+          center: new kakao.maps.LatLng(LatLng.lat, LatLng.lng), // 지도의 중심좌표
+          level: 4 // 지도의 확대 레벨
+        };
+
+      var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+      map.setZoomable(false);
+      var zoomControl = new daum.maps.ZoomControl();
+      map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+      // 결과값으로 받은 위치를 마커로 표시합니다
+      var marker = new kakao.maps.Marker({
+          map: map,
+          position: new kakao.maps.LatLng(LatLng.lat, LatLng.lng)
+      });
+    });
+
+    function fnCallWeb2App(type) {
+      event.preventDefault();
+      var scheme, package, fallbackUrl, fail, useUrlScheme;
+      
+      switch(type) {
+          case 'kakaoNavi':
+              alertOpen_skin('앱이 설치되어 있지 않은 경우\n길 안내가 실행되지 않을 수 있습니다');
+              Kakao.Navi.share({
+                  name: '지타워컨벤션',
+                  x: 127.467258,
+                  y: 36.620527,
+                  coordType: 'wgs84'
+              });
+              break;
+          case 'tmap':
+              alertOpen_skin('앱이 설치되어 있지 않은 경우\n길 안내가 실행되지 않을 수 있습니다');
+              scheme = 'tmap://route?goalx=127.467258&goaly=36.620527&goalname=청주에스가든';
+              package = 'com.skt.tmap.ku';
+              fallbackUrl = scheme;
+              break;
+          case 'naverMap':
+              alertOpen_skin('앱이 설치되어 있지 않은 경우\n길 안내가 실행되지 않을 수 있습니다');
+              scheme = 'navermaps://?menu=location&pinType=place&lat=36.620527&lng=127.467258&title=청주에스가든';
+              package = 'com.nhn.android.nmap';
+              fallbackUrl = 'http://map.naver.com/index.nhn?elng=127.467258&elat=36.620527&etext=청주에스가든&menu=route&pathType=0';
+              fail = function() {
+                  $('#fakeAnchor').remove();
+                  $('body').append("<a href='http://map.naver.com/index.nhn?elng=127.467258&elat=36.620527&etext=청주에스가든&menu=route&pathType=0' id='fakeAnchor'></a>");
+                  $('#fakeAnchor').get(0).click();
+              }
+              break;
+          case 'kakaoCalandar':
+              break;
+      }
+      
+      const callWeb2App = new CallWeb2App({
+          scheme: scheme,
+          package: package,
+          useUrlScheme: useUrlScheme,
+          fallbackUrl: fallbackUrl,
+          fail: fail
+      });
+      
+      callWeb2App.run();
+    }
+  </script>
 
 
-
-    <div class="visitPopLast">
-        <div class="bg"></div>
-        <div class="in">
-            <div class="tit01">감사합니다!</div>
-            <div class="tit02">작성하신 참석여부가<br />정상적으로 전달되었습니다.</div>
-            <a href="javascript:;" class="close" onclick="visitPopLastClose()">닫기</span></a>
-        </div>
-    </div>
-    <!-- //참석여부 신규 -->
-
-
-    <script>
-        function fnCallWeb2App(type) {
-            event.preventDefault();
-            var scheme, package, fallbackUrl, fail, useUrlScheme;
-
-            switch (type) {
-                case 'kakaoNavi':
-                    alertOpen_skin('앱이 설치되어 있지 않은 경우\n길 안내가 실행되지 않을 수 있습니다');
-                    /*window.open('https://map.kakao.com/link/to/서울 신라호텔,37.5575055053737,127.007952910656','kakaomap','');*/
-                    Kakao.Navi.share({
-                        name: '서울신라호텔',
-                        x: 127.007952910656,
-                        y: 37.5575055053737,
-                        coordType: 'wgs84'
-                    });
-                    break;
-                case 'tmap':
-                    alertOpen_skin('앱이 설치되어 있지 않은 경우\n길 안내가 실행되지 않을 수 있습니다');
-                    scheme = 'tmap://route?goalx=127.007952910656&goaly=37.5575055053737&goalname=서울 신라호텔';
-                    package = 'com.skt.tmap.ku';
-                    fallbackUrl = scheme;
-                    break;
-                case 'naverMap':
-                    alertOpen_skin('앱이 설치되어 있지 않은 경우\n길 안내가 실행되지 않을 수 있습니다');
-                    scheme = 'navermaps://?menu=location&pinType=place&lat=37.5575055053737&lng=127.007952910656&title=서울 신라호텔';
-                    package = 'com.nhn.android.nmap';
-                    //useUrlScheme = true;
-                    fallbackUrl = 'http://map.naver.com/index.nhn?elng=127.007952910656&elat=37.5575055053737&etext=서울 신라호텔&menu=route&pathType=0';
-                    fail = function() {
-                        $('#fakeAnchor').remove();
-                        $('body').append("<a href='http://map.naver.com/index.nhn?elng=127.007952910656&elat=37.5575055053737&etext=서울 신라호텔&menu=route&pathType=0' id='fakeAnchor'></a>");
-                        $('#fakeAnchor').get(0).click();
-                    }
-                    break;
-                case 'kakaoCalandar':
-
-                    break;
-            }
-
-            const callWeb2App = new CallWeb2App({
-                scheme: scheme,
-                package: package,
-                useUrlScheme: useUrlScheme,
-                fallbackUrl: fallbackUrl,
-                fail: fail
-            });
-
-            callWeb2App.run();
-        }
-    </script>
-
-    <script src='https://wedding.dddproject.com/plugin/tpl/js/utils_new.js?t=1689296357'></script>
+    <script src='.plugintpl/js/utils_new.js'></script>
 
     <script>
         $(function() {
